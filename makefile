@@ -4,7 +4,7 @@ format:
 
 .PHONY: build
 build:
-	go build ./cmd
+	go build ./cmd/main.go
 
 .PHONY: lint
 lint:
@@ -12,7 +12,7 @@ lint:
 
 .PHONY: test
 test:
-	go test ./...
+	go test -v ./cmd/main_test.go
 
 .PHONY: all
 all:  format lint build test
